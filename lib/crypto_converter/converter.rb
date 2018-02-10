@@ -13,7 +13,11 @@ class Converter
 
   def refresh
     uri = URI.parse(@currencies_path)
-    response = Net::HTTP.get(uri)
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    request = Net::HTTP::Get.new(uri.request_uri)
+    response = http.request(request)
+
     @currencies_json = JSON.parse(response)
   end
 

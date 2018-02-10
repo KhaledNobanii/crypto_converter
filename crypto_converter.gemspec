@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name               = "crypto_converter"
-  s.version            = "0.0.3"
+  s.version            = "0.0.4"
   s.default_executable = "crypto_converter"
   s.authors = ["Saascoin"]
   s.date = %q{2018-02-09}
