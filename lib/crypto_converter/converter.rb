@@ -22,4 +22,8 @@ class Converter
     to ||= @targeted_currency
     (amount.to_f * @currencies_json[from].to_f) / @currencies_json[to].to_f
   end
+
+  def set_targeted_currency(targeted_currency)
+    @targeted_currency = targeted_currency
+  end
 end
