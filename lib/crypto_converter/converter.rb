@@ -18,7 +18,7 @@ class Converter
     request = Net::HTTP::Get.new(uri.request_uri)
     response = http.request(request)
 
-    @currencies_json = JSON.parse(response)
+    @currencies_json = JSON.parse(response.body)
   end
 
   def convert(amount, from = nil, to = nil)
